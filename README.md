@@ -1,61 +1,43 @@
-# 0x00. AirBnB clone - The console
+# AirBnB Clone Console - Morocco
 
-## 0x00.Table of contents
+This is a project to build a clone of [Airbnb](https://www.airbnb.com/) - the popular accommodation rental platform.
+The project is divided into multiple phases, each one is built on top of the previous one.
 
-* [0x01 Introduction](#0x01-Introduction)
-* [0x02 Environment](#0x02-Environment)
-* [0x03 Installation](#0x03-Installation)
-* [0x04 Testing](#0x04-Testing)
-* [0x05 Usage](#0x05-Usage)
-* [0x06 Authors](#0x06-Authors)
+The first phase is the console app that will allow us to interact with the Airbnb clone from the command line.
+This is the first step towards building the AirBnB clone project.
 
-## 0x01 Introduction
+## Table of Contents
 
-Team project to build a clone of [AirBnB](https://www.airbnb.com/).
+* [1. Introduction](#1-Introduction)
+* [2. Installation](#2-Installation)
+* [3. Usage](#3-Usage)
+* [4. Testing](#4-Testing)
+* [5. Authors](#5-Authors)
+* [6. License](#6-license)
 
-The console is a command interpreter to manage objects abstraction between objects and how they are stored.
+## ``1-Introduction``
 
-To see the fundamental background of the project visit the [Wiki](https://github.com/ralexrivero/AirBnB_clone/wiki).
+The Airbnb Clone Console is a command line tool that allows you to interact with the Airbnb Clone project.
 
-The console will perform the following tasks:
+## ``2-Installation``
 
-* create a new object
-* retrive an object from a file
-* do operations on objects
-* destroy an object
+1. Clone this GitHub repository to your local machine.
 
-### Storage
+`git clone https://github.com/hagouchikarim/AirBnB_clone.git`
 
-All the classes are handled by the `Storage` engine in the `FileStorage` Class.
+2.  Jump to the directory of the project.
 
-## 0x02 Environment
+`cd AirBnB-Clone` 
 
-<!-- ubuntu -->
-<a href="https://ubuntu.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Ubuntu&color=E95420&logo=Ubuntu&logoColor=E95420&labelColor=2F333A" alt="Suite CRM"></a> <!-- bash --> <a href="https://www.gnu.org/software/bash/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=GNU%20Bash&color=4EAA25&logo=GNU%20Bash&logoColor=4EAA25&labelColor=2F333A" alt="terminal"></a> <!-- python--> <a href="https://www.python.org" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Python&color=FFD43B&logo=python&logoColor=3776AB&labelColor=2F333A" alt="python"></a> </a> <!-- vim --> <a href="https://www.vim.org/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Vim&color=019733&logo=Vim&logoColor=019733&labelColor=2F333A" alt="Suite CRM"></a> <!-- vs code --> <a href="https://code.visualstudio.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Visual%20Studio%20Code&color=5C2D91&logo=Visual%20Studio%20Code&logoColor=5C2D91&labelColor=2F333A" alt="Suite CRM"></a> </a><!-- git --> <a href="https://git-scm.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Git&color=F05032&logo=Git&logoColor=F05032&labelColor=2F333A" alt="git distributed version control system"></a> <!-- github --> <a href="https://github.com" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=GitHub&color=181717&logo=GitHub&logoColor=f2f2f2&labelColor=2F333A" alt="Github"></a>
- <!-- Style guidelines -->
-* Style guidelines:
-  * [pycodestyle (version 2.7.*)](https://pypi.org/project/pycodestyle/)
-  * [PEP8](https://pep8.org/)
+3.  Execute the console.py
 
-All the development and testing were run over an operating system Ubuntu 22.04 LTS using the programming language Python 3.10 The editors used were VIM, VSCode and Control version using Git.
+`./console.py`
 
-## 0x03 Installation
+### Execution 
 
-```bash
-git clone https://github.com/yas19sin/AirBnB_clone_v2.git
+Interactive mode
+
 ```
-
-change to the `AirBnb` directory and run the command:
-
-```bash
- ./console.py
-```
-
-### Execution
-
-In interactive mode
-
-```bash
 $ ./console.py
 (hbnb) help
 
@@ -63,22 +45,20 @@ Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
 
-(hbnb)
-(hbnb)
+(hbnb) 
+(hbnb) 
 (hbnb) quit
 $
 ```
-
-in Non-interactive mode
-
-```bash
+Non Interactive mode
+```
 $ echo "help" | ./console.py
 (hbnb)
 
 Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
-(hbnb)
+(hbnb) 
 $
 $ cat test_help
 help
@@ -89,66 +69,13 @@ $ cat test_help | ./console.py
 Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
-(hbnb)
+(hbnb) 
 $
 ```
 
-## 0x04 Testing
-All the tests are defined in the `tests` folder.
+## ``3-Usage``
 
-### Documentation
-
-* Modules:
-
-```python
-python3 -c 'print(__import__("my_module").__doc__)'
-```
-
-* Classes:
-
-```python
-python3 -c 'print(__import__("my_module").MyClass.__doc__)'
-```
-
-* Functions (inside and outside a class):
-
-```python
-python3 -c 'print(__import__("my_module").my_function.__doc__)'
-```
-
-and
-
-```python
-python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
-```
-
-### Python Unit Tests
-
-* unittest module
-* File extension ``` .py ```
-* Files and folders star with ```test_```
-* Organization:for ```models/base.py```, unit tests in: ```tests/test_models/test_base.py```
-* Execution command: ```python3 -m unittest discover tests```
-* or: ```python3 -m unittest tests/test_models/test_base.py```
-
-### run test in interactive mode
-
-```bash
-echo "python3 -m unittest discover tests" | bash
-```
-
-### run test in non-interactive mode
-
-To run the tests in non-interactive mode, and discover all the test, you can use the command:
-
-```bash
-python3 -m unittest discover tests
-```
-
-
-## 0x05 Usage
-
-* Start the console in interactive mode:
+* Start the console in the interactive mode:
 
 ```bash
 $ ./console.py
@@ -174,49 +101,26 @@ EOF  all  count  create  destroy  help  quit  show  update
 $
 ```
 
-### Commands
-
-> The commands are displayed in the following format *Command / usage / example with output*
-
-* Create
+* create
 
 > *Creates a new instance of a given class. The class' ID is printed and the instance is saved to the file file.json.*
 
 ```bash
-create <class>
-
-```
-
-```bash
 (hbnb) create BaseModel
-6cfb47c4-a434-4da7-ac03-2122624c3762
-(hbnb)
+503d1313-743a-4c33-8927-b652d81e2d65
+$
 ```
 
-* Show
-
-```bash
-show <class> <id>
-```
-
-```bash
-(hbnb) show BaseModel 6cfb47c4-a434-4da7-ac03-2122624c3762
-[BaseModel] (a) [BaseModel] (6cfb47c4-a434-4da7-ac03-2122624c3762) {'id': '6cfb47c4-a434-4da7-ac03-2122624c3762', 'created_at': datetime.datetime(2021, 11, 14, 3, 28, 45, 571360), 'updated_at': datetime.datetime(2021, 11, 14, 3, 28, 45, 571389)}
-(hbnb)
-```
-
-* Destroy
+* show
 
 > *Deletes an instance of a given class with a given ID.*
 > *Update the file.json*
 
 ```bash
-(hbnb) create User
-0c98d2b8-7ffa-42b7-8009-d9d54b69a472
-(hbnb) destroy User 0c98d2b8-7ffa-42b7-8009-d9d54b69a472
-(hbnb) show User 0c98d2b8-7ffa-42b7-8009-d9d54b69a472
-** no instance found **
+(hbnb) show BaseModel 57262839-51d7-4a9a-93e2-35ed8e91d823
+[BaseModel] (503d1313-743a-4c33-8927-b652d81e2d65) {'id': '503d1313-743a-4c33-8927-b652d81e2d65', 'created_at': datetime.datetime(2024, 2, 10, 0, 38, 25, 496645), 'updated_at': datetime.datetime(2024, 2, 10, 0, 38, 25, 496650)}
 (hbnb)
+(hbhb)
 ```
 
 * all
@@ -225,42 +129,66 @@ show <class> <id>
 > *If no class is passed, all classes are printed.*
 
 ```bash
-(hbnb) create BaseModel
-e45ddda9-eb80-4858-99a9-226d4f08a629
+(hbnb) all
+[BaseModel] (503d1313-743a-4c33-8927-b652d81e2d65) {'id': '503d1313-743a-4c33-8927-b652d81e2d65', 'created_at': datetime.datetime(2024, 2, 10, 0, 38, 25, 496645), 'updated_at': datetime.datetime(2024, 2, 10, 0, 38, 25, 496650)}
 (hbnb) all BaseModel
-["[BaseModel] (4c8f7ebc-257f-4ed1-b26b-e7aace459897) [BaseModel] (4c8f7ebc-257f-4ed1-b26b-e7aace459897) {'id': '4c8f7ebc-257f-4ed1-b26b-e7aace459897', 'created_at': datetime.datetime(2021, 11, 13, 22, 19, 19, 447155), 'updated_at': datetime.datetime(2021, 11, 13, 22, 19, 19, 447257), 'name': 'My First Model', 'my_number': 89}"]
-["[BaseMode
+[BaseModel] (503d1313-743a-4c33-8927-b652d81e2d65) {'id': '503d1313-743a-4c33-8927-b652d81e2d65', 'created_at': datetime.datetime(2024, 2, 10, 0, 38, 25, 496645), 'updated_at': datetime.datetime(2024, 2, 10, 0, 38, 25, 496650)}
+```
+* destroy
+
+>*Deletes an instance of a given class with a given ID.*
+>*Update the file.json*
+
+```bash
+(hbnb) destroy
+** class name missing **
+(hbnb) destroy BaseModel
+** instance id missing **
+(hbnb) destroy BaseModel 503d1313-743a-4c33-8927-b652d81e2d65
+(hbnb) all
+[]
 ```
 
-* count
+* count 
 
 > *Prints the number of instances of a given class.*
 
 ```bash
-(hbnb) create City
-4e01c33e-2564-42c2-b61c-17e512898bad
-(hbnb) create City
-e952b772-80a5-41e9-b728-6bc4dc5c21b4
-(hbnb) count City
-2
-(hbnb)
+(hbnb) create User
+ef8595de-6a2c-496a-af6d-d96f33b389f3
+(hbnb) create User
+feb9c2f0-6b4f-4dcd-b3ed-2faebc4ccbab
+(hbnb) create User
+edbc4a23-714a-4364-a52f-ac041042e4b0
+(hbnb) User.count()
+3
 ```
 
-* update
+## ``4-Testing``
 
-> *Updates an instance based on the class name, id, and kwargs passed.*
-> *Update the file.json*
+* unittest module
+* File extension ``` .py ```
+* Files and folders start with ```test_```
+* Organization:for ```models/base.py```, unit tests in: ```tests/test_models/test_base.py```
+* Execution command: ```python3 -m unittest discover tests```
+* or: ```python3 -m unittest tests/test_models/test_base.py```
 
-## 0x06 Authors
-<details>
-    <summary>Yassine Ennaour</summary>
-    <ul>
-    <li><a href="https://www.github.com/yas19sin">Github</a></li>
-    </ul>
-</details>
-<details>
-    <summary>Karim ElHagouchi</summary>
-    <ul>
-    <li><a href="https://www.github.com/hagouchikarim">Github</a></li>
-    </ul>
-</details>
+### run TEST interactive mode
+
+```bash
+echo "python3 -m unittest discover tests" | bash
+```
+
+### run TEST non-interactive mode
+
+To run the tests in non-interactive mode, and discover all the tests, you can use the command:
+
+```bash
+python3 -m unittest discover tests
+```
+
+## ``5-Authors``
+
+-   [Karim ElHagouchi](https://github.com/hagouchikarim/)
+-   [Yassine Ennaour](https://github.com/yas19sin/)
+
